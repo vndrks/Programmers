@@ -1,0 +1,26 @@
+﻿{
+  "configurations": [
+    {
+      "name": "Linux-Debug-x64",
+      "generator": "Unix Makefiles",
+      "configurationType": "Debug",
+      "cmakeExecutable": "/usr/bin/cmake",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-j8",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x64" ],
+      "intelliSenseMode": "linux-gcc-x64",
+      "remoteMachineName": "1080901836;192.168.2.115 (username=vndrks, port=22, authentication=Password)",
+      "remoteCMakeListsRoot": "$HOME/Programmers",
+      "remoteBuildRoot": "$HOME/Programmers/${projectDirName}/out/build/${name}",
+      "remoteInstallRoot": "$HOME/Programmers/${projectDirName}/out/install/${name}",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0",
+      "variables": []
+    }
+  ]
+}
