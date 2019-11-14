@@ -9,7 +9,9 @@ class Camouflage
 {
 public:
 	int solution(vector<vector<string>> clothes);
-	void DFS(int v, int gole);
+	
+	int solution2(vector<vector<string>> clothes);
+
 private:
 
 

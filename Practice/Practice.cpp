@@ -3,6 +3,7 @@
 #include "Hash/IncompletePlayer.h"
 #include "Hash/TelephoneBook.h"
 #include "Hash/Camouflage.h"
+#include "Hash/BestAlbum.h"
 
 #include <string>
 #include <vector>
@@ -61,8 +62,14 @@ int main(int argc, char* argv[])
 
 	clothes.push_back(cloth3);
 
-	Camouflage camouflage;
-	camouflage.solution(clothes);
+	//Camouflage camouflage;
+	//camouflage.solution2(clothes);
+
+	vector<string> genres{ "classic", "pop", "classic", "classic", "pop" };
+	vector<int> plays{ 500, 600, 150, 800, 2500 };
+
+	BestAlbum bestAlbum;
+	bestAlbum.solution(genres, plays);
 
 	return 0;
 }

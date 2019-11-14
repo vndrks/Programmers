@@ -21,36 +21,35 @@ int Camouflage::solution(vector<vector<string>> clothes)
 		}
 	}
 
-	int nWearCnt = 0;
+	int nWearCnt = 1;
 
-	// 1개
 	for (auto const& element : lClothes)
 	{
-		nWearCnt += element.second.size();
+		nWearCnt *= (element.second.size() + 1);
 	}
 
-	// Type > 1
-	int nCnt = 1;
-
-	if (lClothes.size > 1)
-	{	
-		for (auto const& element : lClothes)
-		{
-			nCnt *= element.second.size();
-		}
-	}
-
-	// 모두 입었을떄
-	int nAllWear = 1;
-	for (auto const& element : lClothes)
-	{
-		nAllWear *= element.second.size();
-	}
+	answer = nWearCnt - 1;
 
 	return answer;
 }
 
-void Camouflage::DFS(int v, int gole)
+//best
+int Camouflage::solution2(vector<vector<string>> clothes)
 {
-	int arrVisit[v]
+	int answer = 1;
+
+	unordered_map <string, int> attributes;
+	for (int i = 0; i < clothes.size(); i++)
+	{
+		attributes[clothes[i][1]]++;
+	}
+		
+	for (auto it = attributes.begin(); it != attributes.end(); it++)
+	{
+		answer *= (it->second + 1);
+	}
+		
+	answer--;
+
+	return answer;
 }
