@@ -7,6 +7,8 @@ file(GLOB HEADER_FILES
 	Hash/TelephoneBook.h
 	Hash/Camouflage.h
 	Hash/BestAlbum.h
+	StackNQueue/FeaturesDevelop.h
+	StackNQueue/Top.h
 )
 
 file(GLOB SOURCE_FILES
@@ -14,7 +16,9 @@ file(GLOB SOURCE_FILES
 	Hash/TelephoneBook.cpp
 	Hash/Camouflage.cpp
 	Hash/BestAlbum.cpp
+	StackNQueue/FeaturesDevelop.cpp
+	StackNQueue/Top.cpp
 )
 
-add_executable (Practice "Practice.cpp" ${HEADER_FILES} ${SOURCE_FILES})
-add_subdirectory(Hash)
+set(Module_PRACTICE ${HEADER_FILES} ${SOURCE_FILES})
+add_library(Practice SHARED ${Module_PRACTICE})
