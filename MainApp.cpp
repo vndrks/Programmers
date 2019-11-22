@@ -3,6 +3,8 @@
 
 #include "CheckSkills/Level_1/Sol1.h"
 #include "Practice/StackNQueue/FeaturesDevelop.h"
+#include "Practice/StackNQueue/Top.h"
+#include "Practice/StackNQueue/Printer.h"
 
 int main(int argc, char* argv[])
 {
@@ -27,8 +29,13 @@ int main(int argc, char* argv[])
 	lReturn = features.solution(lProgresses, lSpeeds);
 	*/
 
-	std::vector<int> lProgresses{ 6, 9, 5, 7, 4 };
+	//std::vector<int> lHeight{ 6, 9, 5, 7, 4 };
+	////std::vector<int> lHeight{ 9, 1, 1, 1 };
 
-	FeaturesDevelop features;
+	//Top top;
+	//top.solution(lHeight);
+
+	Printer printer;
+	printer.solution
 	return 0;
 }

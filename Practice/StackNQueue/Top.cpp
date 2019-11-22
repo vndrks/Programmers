@@ -1,30 +1,41 @@
 #include "Top.h"
 
+#include <stack>
+
 vector<int> Top::solution(vector<int> heights)
 {
 	vector<int> answer;
-
-	while (1)
+	stack<int> lRecvNum;
+	
+	for (int i = heights.size() - 1; i >= 0; --i)
 	{
-
-	}
-
-
-	for (int i = heights.size(); i > 0; --i)
-	{
-
-		while (1)
+		for (int j = i - 1; j >= 0; )	// Check recv signal top id
 		{
-			if (heights[i] < heights[i - 1])
+			if (heights[j] > heights[i])
 			{
-				answer.push_back(i - 1);
+				lRecvNum.push(j + 1);
+				break;
 			}
 			else
 			{
-				answer.push_back(i - 2);
+				--j;
+			}
+
+			if (j < 0)
+			{
+				lRecvNum.push(0);
+				break;
 			}
 		}
 	}
 
+	lRecvNum.push(0);	// first Top. Cannot send.
+
+	for (int i = 0; i < heights.size(); ++i)
+	{
+		answer.push_back(lRecvNum.top());
+		lRecvNum.pop();
+	}
+	
 	return answer;
 }
