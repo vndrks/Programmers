@@ -10,6 +10,7 @@ file(GLOB HEADER_FILES
 	StackNQueue/FeaturesDevelop.h
 	StackNQueue/Top.h
 	StackNQueue/Printer.h
+	DFSnBFS/TargetNumber.h
 )
 
 file(GLOB SOURCE_FILES
@@ -20,6 +21,7 @@ file(GLOB SOURCE_FILES
 	StackNQueue/FeaturesDevelop.cpp
 	StackNQueue/Top.cpp
 	StackNQueue/Printer.cpp
+	DFSnBFS/TargetNumber.cpp
 )
 
 set(Module_PRACTICE ${HEADER_FILES} ${SOURCE_FILES})

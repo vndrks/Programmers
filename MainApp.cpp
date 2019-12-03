@@ -35,7 +35,5 @@ int main(int argc, char* argv[])
 	//Top top;
 	//top.solution(lHeight);
 
-	Printer printer;
-	printer.solution
 	return 0;
 }
