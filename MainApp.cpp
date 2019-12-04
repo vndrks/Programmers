@@ -5,6 +5,7 @@
 #include "Practice/StackNQueue/FeaturesDevelop.h"
 #include "Practice/StackNQueue/Top.h"
 #include "Practice/StackNQueue/Printer.h"
+#include "Practice/DFSnBFS/TargetNumber.h"
 
 int main(int argc, char* argv[])
 {
@@ -34,6 +35,13 @@ int main(int argc, char* argv[])
 
 	//Top top;
 	//top.solution(lHeight);
+
+	
+	vector<int> lNumbers = { 3, 3, 3 };
+	int ret = 3;
+	
+	TargetNumber targetNumber;
+	targetNumber.solution(lNumbers, ret);
 
 	return 0;
 }
